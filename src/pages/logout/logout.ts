@@ -20,12 +20,12 @@ export class LogoutPage {
   confirmLogout() {
     let confirm = this.alertCtrl.create({
       title: 'Confirm logout',
-      subTitle: '¿Seguro que desea cerrar sesion?',
+      subTitle: 'Are u sure?',
       buttons: [
         {
           text: 'No',
           handler: () => {
-            console.log("No desea cerrar sesión");
+            console.log("No");
           }
         }, {
           text: 'Yes',
