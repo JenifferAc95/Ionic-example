@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, App, AlertController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
-/**
- * Generated class for the LogoutPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-logout',
@@ -14,11 +9,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LogoutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController,
+    public app: App,
+    public alertCtrl: AlertController) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LogoutPage');
+  }
+
+  confirmLogout() {
+    let confirm = this.alertCtrl.create({
+      title: 'Confirm logout',
+      subTitle: 'Are u sure?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+            console.log("No");
+          }
+        }, {
+          text: 'Yes',
+          handler: () => {
+            this._logout();
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  private _logout() {
+    this.app.getRootNav().setRoot(LoginPage);
   }
 
 }
