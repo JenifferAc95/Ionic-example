@@ -1,6 +1,5 @@
-/*Comment or delete this line */ import { Component } from '@angular/core';
-// import { Component, Input, Output, EventEmitter } from '@angular/core';
-// import { Recipe, RecipesProvider } from '../../providers/recipes/recipes';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Recipe, RecipesProvider } from '../../providers/recipes/recipes';
 
 @Component({
   selector: 'recipe-form',
@@ -8,27 +7,20 @@
 })
 export class RecipeFormComponent {
 
-  // @Input() recipe: Recipe;
-  // @Input() isUpdate: boolean;
-  // @Output() fireAction: EventEmitter<Recipe> = new EventEmitter<Recipe>();
-  // submitBtn: string;
+  @Input() recipe: Recipe;
+  @Input() isUpdate: boolean;
+  @Output() fireAction: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+  submitBtn: string;
 
-  /*
-    constructor(private recipeService: RecipesProvider) {
-      console.log('Hello RecipeFormComponent Component');
-    }
-  */
+  constructor(private recipeService: RecipesProvider) {
+    console.log('Hello RecipeFormComponent Component');
+  }
 
-  /*
-    ngOnInit() {
-      this.submitBtn = this.isUpdate ? "Update" : "Save";
-    }
-  */
+  ngOnInit() {
+    this.submitBtn = this.isUpdate ? "Update" : "Save";
+  }
 
-  /*
-    processRecipe(): void {
-      this.fireAction.emit(this.recipe);
-    }
-  */
-
+  processRecipe(): void {
+    this.fireAction.emit(this.recipe);
+  }
 }

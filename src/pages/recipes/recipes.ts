@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { Recipe, RecipesProvider } from '../../providers/recipes/recipes'
+import { Recipe, RecipesProvider } from '../../providers/recipes/recipes';
+import { RecipeAddPage } from '../recipe-add/recipe-add';
 
 @IonicPage()
 @Component({
@@ -29,6 +30,10 @@ export class RecipesPage {
         console.log("Oops something is wrong!!");
       }
     );
+  }
+
+  add() {
+    this.navCtrl.push(RecipeAddPage);
   }
 
 }

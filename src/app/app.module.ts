@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { RecipeAddPage } from '../pages/recipe-add/recipe-add';
 import { RecipesProvider } from '../providers/recipes/recipes';
 import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
 
@@ -15,7 +16,8 @@ import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
     MyApp,
     HomePage,
     TabsPage,
-    RecipeFormComponent
+    RecipeFormComponent,
+    RecipeAddPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
   entryComponents: [
     MyApp,
     HomePage,
-    TabsPage
+    TabsPage,
+    RecipeAddPage
   ],
   providers: [
     StatusBar,

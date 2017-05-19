@@ -1,37 +1,37 @@
 <form #recipeForm="ngForm" name="recipeForm" novalidate>
-  <!-- <ion-item>
+  <ion-item>
     <ion-label floating color="primary">Name</ion-label>
     <ion-input [(ngModel)]="recipe.name" name="name" type="text" #name="ngModel" required></ion-input>
   </ion-item>
 
   <p [hidden]="name.valid" color="danger" padding-left>
     The field is required
-  </p> -->
+  </p>
 
-  <!-- <ion-item>
+  <ion-item>
     <ion-label floating color="primary">Ingredients</ion-label>
     <ion-textarea [(ngModel)]="recipe.ingredients" name="ingredients" type="text" #ingredients="ngModel" required></ion-textarea>
   </ion-item>
 
   <p [hidden]="ingredients.valid" color="danger" padding-left>
     The field is required
-  </p> -->
+  </p>
 
-  <!-- <ion-item>
+  <ion-item>
     <ion-label floating color="primary">Instructions</ion-label>
     <ion-textarea [(ngModel)]="recipe.instructions" name="instructions" type="text" #instructions="ngModel" required></ion-textarea>
   </ion-item>
 
   <p [hidden]="instructions.valid" color="danger" padding-left>
     The field is required
-  </p> -->
+  </p>
 
-  <!-- <ion-row responsive-sm>
+  <ion-row responsive-sm>
     <ion-col>
       <button ion-button [disabled]="!recipeForm.valid" (click)="processRecipe()" type="submit" color="primary" block>
           {{submitBtn}}
       </button>
     </ion-col>
-  </ion-row> -->
-  
+  </ion-row>
+
 </form>
