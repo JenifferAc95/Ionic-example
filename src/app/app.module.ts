@@ -5,19 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RecipeAddPage } from '../pages/recipe-add/recipe-add';
 import { RecipesProvider } from '../providers/recipes/recipes';
 import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
+import { RecipeInfoPage } from '../pages/recipe-info/recipe-info';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     TabsPage,
     RecipeFormComponent,
-    RecipeAddPage
+    RecipeAddPage,
+    RecipeInfoPage
   ],
   imports: [
     BrowserModule,
@@ -26,15 +26,15 @@ import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TabsPage,
-    RecipeAddPage
+    RecipeAddPage,
+    RecipeInfoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     RecipesProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

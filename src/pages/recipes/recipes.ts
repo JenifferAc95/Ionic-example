@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { ModalController, IonicPage, NavController } from 'ionic-angular';
 import { Recipe, RecipesProvider } from '../../providers/recipes/recipes';
 import { RecipeAddPage } from '../recipe-add/recipe-add';
+import { RecipeInfoPage } from '../recipe-info/recipe-info';
 
 @IonicPage()
 @Component({
@@ -13,6 +14,7 @@ export class RecipesPage {
   recipes: Recipe[];
 
   constructor(public navCtrl: NavController,
+    public modalCtrl: ModalController,
     public recipeService: RecipesProvider) {
   }
 
@@ -34,6 +36,13 @@ export class RecipesPage {
 
   add() {
     this.navCtrl.push(RecipeAddPage);
+  }
+
+  presentRecipeModal(recipe) {
+    let recipeModal = this.modalCtrl.create(RecipeInfoPage, {
+      recipe: recipe
+    });
+    recipeModal.present();
   }
 
 }
