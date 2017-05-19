@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>Recipe detail</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="closeModal()">
+    <ion-icon name="close"></ion-icon>
+  </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <img [src]="'assets/img/recipe.jpg'" />
+    <ion-card-content>
+      <ion-card-title color="secondary">{{recipe.name}}</ion-card-title>
+      <h2>Ingredients:</h2>
+      <p> {{recipe.ingredients}} </p>
+      <h2>Instructions:</h2>
+      <p> {{recipe.instructions}} </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
