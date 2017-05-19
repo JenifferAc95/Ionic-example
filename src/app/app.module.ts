@@ -10,17 +10,13 @@ import { RecipeAddPage } from '../pages/recipe-add/recipe-add';
 import { RecipesProvider } from '../providers/recipes/recipes';
 import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
 import { RecipeInfoPage } from '../pages/recipe-info/recipe-info';
-import { AuthProvider } from '../providers/auth/auth';
-import { LoginPage } from '../pages/login/login';
-
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     RecipeFormComponent,
     RecipeAddPage,
-    RecipeInfoPage,
-    LoginPage
+    RecipeInfoPage
   ],
   imports: [
     BrowserModule,
@@ -31,15 +27,13 @@ import { LoginPage } from '../pages/login/login';
     MyApp,
     TabsPage,
     RecipeAddPage,
-    RecipeInfoPage,
-    LoginPage
+    RecipeInfoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    RecipesProvider,
-    AuthProvider
+    RecipesProvider
   ]
 })
 export class AppModule { }
