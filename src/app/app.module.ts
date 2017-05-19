@@ -9,15 +9,15 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { RecipeAddPage } from '../pages/recipe-add/recipe-add';
 import { RecipesProvider } from '../providers/recipes/recipes';
 import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
-// import { RecipeInfoPage } from '../pages/recipe-info/recipe-info';
+import { RecipeInfoPage } from '../pages/recipe-info/recipe-info';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     RecipeFormComponent,
-    RecipeAddPage
-    // RecipeInfoPage
+    RecipeAddPage,
+    RecipeInfoPage
   ],
   imports: [
     BrowserModule,
@@ -27,8 +27,8 @@ import { RecipeFormComponent } from '../components/recipe-form/recipe-form';
   entryComponents: [
     MyApp,
     TabsPage,
-    RecipeAddPage
-    // RecipeInfoPage
+    RecipeAddPage,
+    RecipeInfoPage
   ],
   providers: [
     StatusBar,
