@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../../providers/recipes/recipes';
-import { IonicPage, NavController, ViewController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+// import { ViewController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -12,19 +14,22 @@ export class RecipeInfoPage {
   recipe: Recipe;
 
   constructor(public navCtrl: NavController,
-    public navParams: NavParams,
-    public viewCtrl: ViewController) { }
+    public navParams: NavParams
+  /*public viewCtrl: ViewController*/) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecipeModalInfoPage');
   }
 
-  ngOnInit() {
-    this.recipe = this.navParams.get("recipe");
-  }
+  /*
+    ngOnInit() {
+      this.recipe = this.navParams.get("recipe");
+    }
+  */
 
-  closeModal(){
-    this.viewCtrl.dismiss();
-  }
-
+  /*
+    closeModal() {
+      this.viewCtrl.dismiss();
+    }
+  */
 }
