@@ -32,8 +32,10 @@ export class RecipesPage {
     );
   }
 
-  add() {
-    this.navCtrl.push(RecipeAddPage);
-  }
+  /*
+    add() {
+      this.navCtrl.push(RecipeAddPage);
+    }
+  */
 
 }
